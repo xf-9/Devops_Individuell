@@ -31,7 +31,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: success()  # Only deployed when test Success
+    if: always()  # Only deployed when test Success
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
