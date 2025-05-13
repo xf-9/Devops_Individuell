@@ -49,6 +49,7 @@ jobs:
     # STEP 5: Copy deploy files
     - name: Copy site files
       run: |
+        rm -rf dist        
         mkdir -p dist
         cp index.html script.js data.json dist/
 
