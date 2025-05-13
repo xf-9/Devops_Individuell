@@ -10,7 +10,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -53,7 +53,7 @@ jobs:
 
     # STEP 6: Upload artifact to GitHub Pages
     - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v2
       with:
         path: dist
 
