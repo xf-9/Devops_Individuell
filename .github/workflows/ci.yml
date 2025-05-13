@@ -30,7 +30,7 @@ jobs:
 
     # STEP 2: Convert CSV to JSON
     - name: Run csvtojson.py
-      run: python csvtojson.py
+      run: python csv_to_json.py
 
     # STEP 3: Run tests
     - name: Run unit tests
