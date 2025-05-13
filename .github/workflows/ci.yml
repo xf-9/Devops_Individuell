@@ -43,6 +43,7 @@ jobs:
 
     # STEP 4: Setup GitHub Pages
     - name: Setup GitHub Pages
+      if: success()
       uses: actions/configure-pages@v5
 
     # STEP 5: Copy deploy files
@@ -53,11 +54,13 @@ jobs:
 
     # STEP 6: Upload artifact to GitHub Pages
     - name: Upload GitHub Pages artifact
+      if: success()
       uses: actions/upload-pages-artifact@v3
       with:
         path: dist
 
     # STEP 7: Deploy
     - name: Deploy to GitHub Pages
+      if: success()
       id: deployment
       uses: actions/deploy-pages@v4
