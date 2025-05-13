@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -37,7 +37,7 @@ jobs:
 
     # STEP 4: Setup GitHub Pages
     - name: Setup GitHub Pages
-      uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v3
 
     # STEP 5: Copy deploy files
     - name: Copy site files
@@ -47,11 +47,11 @@ jobs:
 
     # STEP 6: Upload artifact to GitHub Pages
     - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: dist
 
     # STEP 7: Deploy
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v3
